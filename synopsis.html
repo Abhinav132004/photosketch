@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PhotoSketch Minor Project Synopsis</title>
+<style>
+    @page {
+        size: A4;
+        margin: 25mm 22mm 20mm 22mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        margin: 0;
+        text-align: justify;
+    }
+    p { margin: 0 0 10px 0; }
+
+    /* ---------- FRONT PAGE ---------- */
+    .cover {
+        border: 3px double #7a0d0d;
+        padding: 22px 26px;
+        min-height: 247mm;
+        page-break-after: always;
+        display: flex;
+        flex-direction: column;
+    }
+    .cover-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin-top: 6px;
+    }
+    .logo {
+        width: 78px;
+        height: 78px;
+        flex-shrink: 0;
+        text-align: center;
+    }
+    .logo .ipu {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: bold;
+        color: #7a0d0d;
+        font-size: 34px;
+        line-height: 1;
+        letter-spacing: 1px;
+    }
+    .logo .ipu-sub {
+        font-size: 7px;
+        color: #7a0d0d;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        margin-top: 3px;
+    }
+    .cover-header .univ {
+        text-align: center;
+        font-weight: bold;
+        font-size: 12.5pt;
+        line-height: 1.35;
+    }
+    .cover-title {
+        text-align: center;
+        font-size: 26pt;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 46px 0 18px 0;
+    }
+    .cover-projecton {
+        text-align: center;
+        font-size: 12pt;
+        margin-bottom: 22px;
+    }
+    .cover-topic {
+        text-align: center;
+        font-size: 16pt;
+        font-weight: bold;
+        line-height: 1.3;
+        margin: 6px 30px 16px 30px;
+    }
+    .cover-subtitle {
+        text-align: center;
+        font-size: 11.5pt;
+        line-height: 1.4;
+        margin: 0 40px 34px 40px;
+    }
+    .cover-degree {
+        text-align: center;
+        font-weight: bold;
+        font-size: 13pt;
+        margin-bottom: 4px;
+    }
+    .cover-session {
+        text-align: center;
+        font-size: 11.5pt;
+        margin-bottom: 34px;
+    }
+    .cover-block {
+        text-align: center;
+        font-size: 12pt;
+        margin-bottom: 6px;
+    }
+    .cover-block .lbl { font-weight: bold; }
+    .cover-names { margin: 6px 0 30px 0; }
+    .cover-names .nm { font-weight: bold; }
+    .cover-guide { margin-top: 8px; }
+    .cover-rule {
+        border: none;
+        border-top: 3px solid #000;
+        width: 62%;
+        margin: 40px auto 0 auto;
+    }
+    .cover-spacer { flex-grow: 1; }
+    .cover-pageno { text-align: center; font-size: 11pt; margin-top: 10px; }
+
+    /* ---------- BODY ---------- */
+    h2.section {
+        font-size: 13pt;
+        font-weight: bold;
+        margin: 20px 0 8px 0;
+        page-break-after: avoid;
+    }
+    h3.sub {
+        font-size: 12pt;
+        font-weight: bold;
+        margin: 12px 0 6px 0;
+        page-break-after: avoid;
+    }
+    ul { margin: 4px 0 10px 0; padding-left: 26px; }
+    li { margin-bottom: 6px; }
+    .pipeline {
+        text-align: center;
+        font-weight: bold;
+        margin: 10px 24px;
+        line-height: 1.5;
+    }
+    .figcap { text-align: center; font-style: italic; font-size: 11pt; margin: 4px 0 12px 0; }
+    .formula { text-align: center; font-style: italic; margin: 8px 0; }
+    table.req {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0 6px 0;
+        font-size: 11pt;
+    }
+    table.req th, table.req td {
+        border: 1px solid #333;
+        padding: 6px 9px;
+        text-align: left;
+        vertical-align: top;
+    }
+    table.req th { background: #ececec; font-weight: bold; }
+    .tblcap { text-align: center; font-style: italic; font-size: 11pt; margin: 4px 0 12px 0; }
+    .content-page { page-break-before: always; }
+    .footer-note { }
+</style>
+</head>
+<body>
+
+<!-- ================= FRONT PAGE ================= -->
+<div class="cover">
+    <div class="cover-header">
+        <div class="logo">
+            <div class="ipu">IIPU</div>
+            <div class="ipu-sub">GURU GOBIND SINGH<br>INDRAPRASTHA<br>UNIVERSITY<br><span style="font-size:6px;">NEW DELHI</span></div>
+        </div>
+        <div class="univ">
+            UNIVERSITY SCHOOL OF AUTOMATION AND<br>ROBOTICS<br>SURAJMAL VIHAR, DELHI-110032
+        </div>
+    </div>
+
+    <div class="cover-title">MINOR PROJECT SYNOPSIS</div>
+
+    <div class="cover-projecton">Project on</div>
+
+    <div class="cover-topic">PHOTOSKETCH &ndash; AI-BASED PHOTO AND SKETCH MATCHING SYSTEM</div>
+
+    <div class="cover-subtitle">
+        Matching Hand-Drawn Facial Sketches with Real Photographs<br>
+        using Computer Vision and Structural Feature Similarity
+    </div>
+
+    <div class="cover-degree">B. Tech (Artificial Intelligence and Data Science)</div>
+    <div class="cover-session">Academic Session: 2026-27</div>
+
+    <div class="cover-block"><span class="lbl">Submitted By:</span></div>
+    <div class="cover-block cover-names">
+        <div class="nm">Abhinav Mishra</div>
+        <div>Enrolment No.: 09719051923</div>
+        <div class="nm" style="margin-top:8px;">Nishchay Hiteshi</div>
+        <div>Enrolment No.: 09519051923</div>
+    </div>
+
+    <div class="cover-block"><span class="lbl">Under the supervision of:</span></div>
+    <div class="cover-block cover-guide">
+        Dr. Anshul Bhatia<br>
+        Assistant Professor<br>
+        Project Mentor<br>
+        USAR, GGSIPU
+    </div>
+
+    <hr class="cover-rule">
+    <div class="cover-spacer"></div>
+    <div class="cover-pageno">1</div>
+</div>
+
+<!-- ================= SECTION 1 ================= -->
+<div>
+    <h2 class="section">1. ABSTRACT</h2>
+    <p>Identifying a person from a hand-drawn facial sketch is a long-standing problem in law enforcement and forensic investigation, where a photograph of the suspect is often unavailable and only an artist's sketch prepared from an eyewitness description exists. The central difficulty is that a sketch and a real photograph of the same individual differ enormously at the pixel level: a sketch carries no colour, no skin texture and no illumination information, only the essential lines and contours of the face. Direct pixel comparison is therefore meaningless, and matching must instead be performed on the underlying structure that the two modalities share.</p>
+    <p>This project implements a photo&ndash;sketch matching system that bridges this modality gap using classical computer-vision techniques rather than large-scale model training. Each candidate photograph is transformed into the sketch domain through a pencil-sketch conversion, and both the query sketch and the transformed photographs are described by structural features derived from edge maps, ORB keypoints and the Structural Similarity Index. These complementary measures are combined into a single similarity score, and the candidate photographs are ranked so that the most probable match is presented first. The system is delivered as an interactive application through which a user uploads a sketch and a gallery of photographs and obtains a ranked, confidence-scored result.</p>
+</div>
+
+<!-- ================= SECTION 2 ================= -->
+<div>
+    <h2 class="section">2. INTRODUCTION</h2>
+    <h3 class="sub">2.1 Sketch-Based Face Recognition</h3>
+    <p>Sketch-based face recognition is a cross-modal matching problem in which a query in one modality, a drawn sketch, must be matched against a gallery in another modality, photographic images. Unlike conventional face recognition, where probe and gallery share the same imaging process, here the two representations are produced by fundamentally different means. The task is to learn or construct a representation invariant to modality, so that the identity common to a sketch and its corresponding photograph can be recovered despite their surface dissimilarity.</p>
+    <h3 class="sub">2.2 The Modality Gap</h3>
+    <p>A photograph is a dense sampling of reflected light, encoding colour, texture and shading, whereas a sketch is a sparse, abstract line drawing that retains only salient boundaries and is shaped by the artist's style and interpretation. This mismatch, commonly termed the modality gap, means that intensity-based comparison fails outright. Bridging the gap requires either transforming one modality into the other or extracting features that survive the transformation, and it is the presence of this gap that makes the problem non-trivial and worthy of study.</p>
+    <h3 class="sub">2.3 Need for Automated Sketch Matching</h3>
+    <p>In forensic practice, a sketch is compared manually against records, a process that is slow, subjective and impractical for large galleries. An automated system that ranks candidate photographs by structural similarity narrows a large gallery to a short list for human review, reducing effort and bias while keeping the final judgement with the investigator. Beyond forensics, the same capability supports digital-art retrieval, entertainment applications and identity verification from stylised inputs.</p>
+</div>
+
+<!-- ================= SECTION 3 ================= -->
+<div>
+    <h2 class="section">3. PROBLEM STATEMENT</h2>
+    <p>A hand-drawn sketch cannot be compared directly with photographic records because the two modalities differ in colour, texture and detail, and pixel-level similarity between a sketch and the correct photograph is typically no higher than between the sketch and an unrelated image. Manual comparison against a large gallery is laborious and subjective, while sophisticated deep-learning solutions demand substantial labelled sketch&ndash;photo datasets, prolonged training and specialised hardware that are frequently unavailable in an academic setting.</p>
+    <p>The problem is therefore twofold: to reduce a sketch and a photograph to a common structural representation in which the identity they share becomes measurable, and to combine several complementary similarity measures into a single, interpretable score that ranks candidate photographs reliably, within a lightweight framework that runs on ordinary hardware without any training phase.</p>
+</div>
+
+<!-- ================= SECTION 4 ================= -->
+<div>
+    <h2 class="section">4. OBJECTIVES</h2>
+    <ul>
+        <li>To study the photo&ndash;sketch matching problem, the nature of the modality gap and the structural cues that remain consistent across a sketch and its corresponding photograph.</li>
+        <li>To implement a pencil-sketch conversion in Python using OpenCV that maps a photograph into the sketch domain for fair comparison.</li>
+        <li>To extract modality-robust structural features from both inputs using Canny edge detection, ORB keypoint matching and the Structural Similarity Index.</li>
+        <li>To design a combined similarity score that fuses these measures into a single interpretable value and ranks candidate photographs against a query sketch.</li>
+        <li>To develop an interactive application allowing a user to upload a sketch and a gallery of photographs and to view the ranked matches with confidence scores.</li>
+        <li>To evaluate the system on sample data and document its behaviour, strengths and limitations, together with directions for improvement.</li>
+    </ul>
+</div>
+
+<!-- ================= SECTION 5 ================= -->
+<div>
+    <h2 class="section">5. KEY CONCEPTS AND TECHNIQUES</h2>
+    <h3 class="sub">5.1 Pencil-Sketch Conversion</h3>
+    <p>A photograph is converted to a sketch-like image by taking its grayscale form, inverting it, blurring the inverted copy and blending the two by colour dodge. The result emphasises edges and suppresses smooth tonal regions, producing an image whose dominant content is the same linear structure a human artist would draw. Bringing photographs into this domain reduces the modality gap before any comparison is attempted.</p>
+    <h3 class="sub">5.2 Edge Detection</h3>
+    <p>Edges mark the boundaries of facial features and are the information most reliably shared between a sketch and a photograph. Canny edge detection extracts a clean binary edge map through gradient computation, non-maximum suppression and hysteresis thresholding, giving a compact structural signature on which sketch and photograph can be compared on equal terms.</p>
+    <h3 class="sub">5.3 ORB Feature Matching</h3>
+    <p>ORB (Oriented FAST and Rotated BRIEF) detects distinctive keypoints such as the corners of the eyes, the tip of the nose and the jawline, and describes each with a compact binary descriptor. Descriptors from the sketch and a candidate photograph are matched, and the count and quality of consistent matches indicate how strongly their local structures agree. ORB is fast, rotation-aware and free of licensing restrictions.</p>
+    <h3 class="sub">5.4 Structural Similarity Index (SSIM)</h3>
+    <p>SSIM compares two images in terms of local luminance, contrast and structure rather than raw pixel differences, returning a value between &minus;1 and 1 where 1 denotes structural identity. Applied to the edge maps or sketch-domain images, it provides a global measure of structural agreement that complements the local evidence supplied by ORB.</p>
+</div>
+
+<!-- ================= SECTION 6 ================= -->
+<div>
+    <h2 class="section">6. PROJECT WORKFLOW</h2>
+    <p>The project is executed in five phases, from an initial study of the problem through to evaluation and documentation. Preprocessing, sketch-domain conversion and feature extraction are developed as reusable stages and brought together in a common matching stage, so that every candidate photograph is processed identically and scored by identical measures.</p>
+    <div class="pipeline">
+        Start &rarr; Literature Study on Sketch&ndash;Photo Matching &rarr;
+        Finalise Objectives and Feature Set &rarr;
+        Collect Sample Photographs and Sketches &rarr;
+        Set Up Environment (Python, OpenCV, NumPy, scikit-image, Streamlit) &rarr;
+        Implement Preprocessing and Sketch Conversion &rarr;
+        Implement Feature Extraction (Canny, ORB, SSIM) &rarr;
+        Implement Combined Scoring and Ranking &rarr;
+        Build Interactive Application &rarr;
+        Test and Evaluate on Sample Data &rarr;
+        Document Findings and Prepare Report &rarr; End
+    </div>
+    <div class="figcap">Fig. 1: Phase-wise project workflow</div>
+</div>
+
+<!-- ================= SECTION 7 ================= -->
+<div>
+    <h2 class="section">7. PROPOSED METHODOLOGY</h2>
+    <p>A query sketch is compared against a gallery of candidate photographs, each of which is first transformed into the sketch domain so that both are represented consistently. The complete pipeline is:</p>
+    <div class="pipeline">
+        Input Sketch and Candidate Photographs &rarr; Preprocessing &rarr;
+        Sketch-Domain Conversion &rarr; Feature Extraction &rarr;
+        Similarity Scoring &rarr; Ranking &rarr; Best-Match Result
+    </div>
+    <div class="figcap">Fig. 2: Data-flow pipeline of the matching system</div>
+    <p>Images are read, resized to a common resolution, converted to grayscale and denoised so that comparison is not dominated by scale or lighting differences. Each photograph is converted to the sketch domain, structural features are extracted from both the query and every candidate, similarity is computed by each measure, and the measures are fused into a single score used to rank the gallery.</p>
+    <h3 class="sub">7.1 Preprocessing</h3>
+    <p>All inputs are standardised to identical dimensions and to grayscale, and light smoothing suppresses stray marks and scanning artefacts. This guarantees that subsequent feature extraction operates on comparable data and that similarity reflects structure rather than incidental differences in size or brightness.</p>
+    <h3 class="sub">7.2 Sketch-Domain Conversion</h3>
+    <p>Each candidate photograph is mapped into the sketch domain by the grayscale&ndash;invert&ndash;blur&ndash;dodge procedure, yielding an image whose dominant content is the linear structure of the face. Comparing a query sketch against sketch-domain photographs rather than raw photographs substantially narrows the modality gap.</p>
+    <h3 class="sub">7.3 Feature Extraction</h3>
+    <p>From each image a Canny edge map is computed as a structural signature, ORB keypoints and descriptors are detected for local matching, and images are prepared for SSIM computation. Together these capture both the global outline and the distinctive local landmarks of a face.</p>
+    <h3 class="sub">7.4 Similarity Scoring and Ranking</h3>
+    <p>An SSIM value over the structural representations, a normalised count of consistent ORB matches, and an edge-map agreement measure are combined by weighted fusion into a single similarity score in a fixed range. Candidate photographs are sorted by this score, and the highest-scoring image is reported as the most probable match with its confidence value.</p>
+</div>
+
+<!-- ================= SECTION 8 ================= -->
+<div>
+    <h2 class="section">8. TECHNOLOGIES AND TOOLS</h2>
+    <ul>
+        <li><b>Python 3</b> &ndash; primary language, chosen for its readable syntax and mature scientific and computer-vision ecosystem.</li>
+        <li><b>OpenCV</b> &ndash; core library, providing image I/O, colour conversion, Canny edge detection, ORB feature detection and matching, and the operations used for sketch conversion.</li>
+        <li><b>NumPy</b> &ndash; array representation of images and the numerical operations used in scoring and normalisation.</li>
+        <li><b>scikit-image</b> &ndash; reference implementation of the Structural Similarity Index used as a structural comparison metric.</li>
+        <li><b>Pillow</b> &ndash; image loading and format handling for the uploaded files.</li>
+        <li><b>Streamlit</b> &ndash; lightweight framework for the interactive web interface through which sketches and photographs are uploaded and ranked results displayed.</li>
+    </ul>
+</div>
+
+<!-- ================= SECTION 9 ================= -->
+<div>
+    <h2 class="section">9. SYSTEM REQUIREMENTS</h2>
+    <table class="req">
+        <tr><th style="width:32%;">Requirement</th><th>Specification</th></tr>
+        <tr><td>Processor</td><td>Intel Core i3 (8th generation) or equivalent; i5 or above recommended</td></tr>
+        <tr><td>RAM</td><td>4 GB minimum; 8 GB recommended for larger image galleries</td></tr>
+        <tr><td>Storage</td><td>Approximately 3 GB free space for libraries, sample images and results</td></tr>
+        <tr><td>Display</td><td>Standard colour monitor, 1366 &times; 768 resolution or higher</td></tr>
+        <tr><td>Operating System</td><td>Windows 10/11, Ubuntu 20.04 or later, or macOS</td></tr>
+        <tr><td>Language</td><td>Python 3.8 or above</td></tr>
+        <tr><td>Libraries</td><td>OpenCV, NumPy, scikit-image, Pillow, Streamlit</td></tr>
+        <tr><td>Environment</td><td>VS Code, Jupyter Notebook or any Python IDE with a web browser</td></tr>
+    </table>
+    <div class="tblcap">Table 1: Hardware and software requirements</div>
+</div>
+
+<!-- ================= SECTION 10 ================= -->
+<div>
+    <h2 class="section">10. PERFORMANCE EVALUATION</h2>
+    <p>As the system produces a ranked list of candidate photographs, its behaviour is assessed both by the internal similarity measures and by standard retrieval indicators computed over labelled sample data.</p>
+    <h3 class="sub">10.1 Structural Similarity Index (SSIM)</h3>
+    <p>SSIM compares local luminance, contrast and structure between the query and a candidate in the structural domain, returning a value between &minus;1 and 1 where 1 denotes structural identity. It supplies the global component of the similarity score and is the measure most aligned with human perception of shape.</p>
+    <h3 class="sub">10.2 ORB Match Score</h3>
+    <p>The number of consistent ORB descriptor matches between the query and a candidate, normalised by the number of detected keypoints, quantifies local structural agreement. A higher normalised count indicates that distinctive facial landmarks coincide, providing the local component of the combined score.</p>
+    <h3 class="sub">10.3 Rank-Based Retrieval Accuracy</h3>
+    <p>Over a labelled sample set the system is assessed by Rank-1 accuracy, the fraction of queries whose correct photograph is ranked first, and by Rank-N accuracy, the fraction whose correct photograph appears within the top N. These indicators express directly how useful the system is for narrowing a gallery to a short list for human review.</p>
+</div>
+
+<!-- ================= SECTION 11 ================= -->
+<div>
+    <h2 class="section">11. EXPECTED RESULTS</h2>
+    <p>The project is expected to show that matching in a shared structural domain succeeds where direct pixel comparison fails, and that fusing several complementary measures ranks candidates more reliably than any single measure alone. The anticipated behaviour of each measure is summarised below; SSIM, ORB and rank-based values are to be filled in from the experimental runs.</p>
+    <table class="req">
+        <tr><th style="width:26%;">Measure</th><th style="width:30%;">Expected Contribution</th><th>Rationale</th></tr>
+        <tr><td>SSIM (structural)</td><td>Global shape agreement</td><td>Captures overall facial structure surviving the modality transform</td></tr>
+        <tr><td>ORB match score</td><td>Local landmark agreement</td><td>Distinctive keypoints coincide when identities match</td></tr>
+        <tr><td>Edge-map agreement</td><td>Contour consistency</td><td>Facial boundaries are the cue most shared across modalities</td></tr>
+        <tr><td>Combined score</td><td>Most reliable ranking</td><td>Fusion offsets the weakness of any single measure</td></tr>
+    </table>
+    <div class="tblcap">Table 2: Anticipated contribution of each similarity measure (to be verified experimentally)</div>
+    <p>Sketch quality is expected to influence accuracy strongly, with clean, well-proportioned sketches ranking their correct photograph highest and rough or stylised sketches performing less well. Cases where the correct photograph appears within the top few results but not at rank one are themselves informative, confirming the intended role of the system as a shortlisting aid rather than a definitive identifier.</p>
+</div>
+
+<!-- ================= SECTION 12 ================= -->
+<div>
+    <h2 class="section">12. APPLICATIONS</h2>
+    <ul>
+        <li><b>Forensic investigation</b> &ndash; narrowing a large photographic database to a short list of candidates matching an eyewitness sketch of a suspect.</li>
+        <li><b>Law enforcement records</b> &ndash; searching mugshot and identity archives from an artist's drawing when no photograph of the individual is available.</li>
+        <li><b>Digital art and retrieval</b> &ndash; finding real photographs that resemble a drawn portrait for illustration, reference or content organisation.</li>
+        <li><b>Entertainment and media</b> &ndash; matching character sketches to actor or model photographs during casting and design.</li>
+        <li><b>Identity verification</b> &ndash; comparing stylised or drawn representations against photographic records in controlled settings.</li>
+        <li><b>Education and research</b> &ndash; a compact demonstration of cross-modal matching and structural feature comparison in computer vision.</li>
+    </ul>
+</div>
+
+<!-- ================= SECTION 13 ================= -->
+<div>
+    <h2 class="section">13. FUTURE SCOPE</h2>
+    <ul>
+        <li>Deep-learning-based matching using a Siamese convolutional network that learns a modality-invariant embedding directly from sketch&ndash;photo pairs.</li>
+        <li>Generative approaches that synthesise a realistic photograph from a sketch, or a sketch from a photograph, to close the modality gap more completely.</li>
+        <li>Training and evaluation on standard benchmark datasets such as CUFS and CUFSF to obtain quantitative accuracy comparable with published work.</li>
+        <li>Facial-landmark alignment before matching, so that pose and scale differences between sketch and photograph are compensated automatically.</li>
+        <li>Scaling to large galleries through indexed feature search, enabling near real-time retrieval from very large photographic databases.</li>
+        <li>Extension to full-body or scene sketches and to sketches drawn in diverse artistic styles for broader applicability.</li>
+    </ul>
+</div>
+
+<!-- ================= SECTION 14 ================= -->
+<div>
+    <h2 class="section">14. CONCLUSION</h2>
+    <p>Matching a hand-drawn sketch to a photograph is difficult because the two modalities share identity but little surface appearance, so comparison must be performed on the structure common to both rather than on raw pixels. This project builds a photo&ndash;sketch matching system that transforms photographs into the sketch domain and compares them with a query sketch using edge maps, ORB keypoints and the Structural Similarity Index, fusing these into a single interpretable score that ranks candidates and is presented through an interactive application. It is expected to confirm that structural comparison in a shared domain succeeds where pixel comparison fails, that fusing complementary measures improves ranking reliability, and that a lightweight, training-free system can serve effectively as a shortlisting aid. The work also provides a clear and reproducible foundation that can be extended to deep-learning and generative approaches.</p>
+</div>
+
+<!-- ================= SECTION 15 ================= -->
+<div>
+    <h2 class="section">15. REFERENCES</h2>
+    <p>[1] R. C. Gonzalez and R. E. Woods, <i>Digital Image Processing</i>, 4th ed. Pearson, 2018.</p>
+    <p>[2] X. Wang and X. Tang, &ldquo;Face photo-sketch synthesis and recognition,&rdquo; <i>IEEE Trans. Pattern Analysis and Machine Intelligence</i>, vol. 31, no. 11, 2009.</p>
+    <p>[3] E. Rublee, V. Rabaud, K. Konolige and G. Bradski, &ldquo;ORB: an efficient alternative to SIFT or SURF,&rdquo; <i>Proc. IEEE ICCV</i>, 2011.</p>
+    <p>[4] J. Canny, &ldquo;A computational approach to edge detection,&rdquo; <i>IEEE Trans. Pattern Analysis and Machine Intelligence</i>, vol. PAMI-8, no. 6, 1986.</p>
+    <p>[5] Z. Wang, A. C. Bovik, H. R. Sheikh and E. P. Simoncelli, &ldquo;Image quality assessment: from error visibility to structural similarity,&rdquo; <i>IEEE Trans. Image Processing</i>, vol. 13, no. 4, 2004.</p>
+    <p>[6] S. Klum, H. Han, B. Klare and A. K. Jain, &ldquo;The FaceSketchID system: matching facial composites to mugshots,&rdquo; <i>IEEE Trans. Information Forensics and Security</i>, vol. 9, no. 12, 2014.</p>
+    <p>[7] G. Bradski, &ldquo;The OpenCV Library,&rdquo; <i>Dr. Dobb&rsquo;s Journal of Software Tools</i>, 2000.</p>
+    <p>[8] OpenCV Documentation &ndash; Feature Detection and Image Filtering modules. Available: https://docs.opencv.org</p>
+    <p>[9] scikit-image Documentation &ndash; Metrics module. Available: https://scikit-image.org</p>
+</div>
+
+</body>
+</html>
