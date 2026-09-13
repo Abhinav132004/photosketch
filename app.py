@@ -307,9 +307,10 @@ with tab_match:
                         unsafe_allow_html=True)
 
         if photos:
-            thumbs = st.columns(min(5, len(photos)))
-            for i, p in enumerate(photos[:5]):
-                thumbs[i].image(bgr_to_rgb(p["image"]), width="stretch")
+            with st.expander(f"👁️ Preview gallery ({len(photos)} photos)", expanded=False):
+                thumbs = st.columns(min(5, len(photos)))
+                for i, p in enumerate(photos[:5]):
+                    thumbs[i].image(bgr_to_rgb(p["image"]), width="stretch")
 
     st.markdown("<br>", unsafe_allow_html=True)
     run = st.button("🚀  Find Matches", width="stretch")
